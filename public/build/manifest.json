@@ -1,12 +1,45 @@
 {
-  "resources/css/app.css": {
-    "file": "assets/app-7a4a8d6c.css",
+  "resources/fonts/GothamBold.ttf": {
+    "file": "assets/GothamBold-50792d8e.ttf",
+    "src": "resources/fonts/GothamBold.ttf"
+  },
+  "resources/fonts/GothamBook.ttf": {
+    "file": "assets/GothamBook-742359d4.ttf",
+    "src": "resources/fonts/GothamBook.ttf"
+  },
+  "resources/fonts/GothamLight.ttf": {
+    "file": "assets/GothamLight-463c6bc3.ttf",
+    "src": "resources/fonts/GothamLight.ttf"
+  },
+  "resources/fonts/GothamMedium.ttf": {
+    "file": "assets/GothamMedium-b5b3eb8e.ttf",
+    "src": "resources/fonts/GothamMedium.ttf"
+  },
+  "resources/js/admin/admin.js": {
+    "file": "assets/admin-4ed993c7.js",
     "isEntry": true,
-    "src": "resources/css/app.css"
+    "src": "resources/js/admin/admin.js"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-14cc1b3c.css",
+    "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-4a08c204.js",
+    "css": [
+      "assets/app-14cc1b3c.css"
+    ],
+    "file": "assets/app-2e8fcf4b.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/scss/admin/admin.scss": {
+    "file": "assets/admin-980c2653.css",
+    "isEntry": true,
+    "src": "resources/scss/admin/admin.scss"
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app-ccb7bcc0.css",
+    "isEntry": true,
+    "src": "resources/scss/app.scss"
   }
 }
