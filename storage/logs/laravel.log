@@ -9022,3 +9022,18 @@
 #57 /Users/mohammedjaseel/.composer/vendor/laravel/valet/server.php(110): require('/Users/mohammed...')
 #58 {main}
 "} 
+[2023-08-25 04:26:43] local.ERROR: There are no commands defined in the "optimaze" namespace.
+
+Did you mean this?
+    optimize {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"optimaze\" namespace.
+
+Did you mean this?
+    optimize at /Users/mohammedjaseel/Documents/Sites/arena/vendor/symfony/console/Application.php:657)
+[stacktrace]
+#0 /Users/mohammedjaseel/Documents/Sites/arena/vendor/symfony/console/Application.php(708): Symfony\\Component\\Console\\Application->findNamespace('optimaze')
+#1 /Users/mohammedjaseel/Documents/Sites/arena/vendor/symfony/console/Application.php(262): Symfony\\Component\\Console\\Application->find('optimaze:clear')
+#2 /Users/mohammedjaseel/Documents/Sites/arena/vendor/symfony/console/Application.php(174): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/mohammedjaseel/Documents/Sites/arena/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/mohammedjaseel/Documents/Sites/arena/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 

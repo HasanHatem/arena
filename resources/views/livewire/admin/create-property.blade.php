@@ -123,7 +123,7 @@
                     @if ($images)
                         <div class="row">
                             <div class="col-100">
-                                <div class="image-preview">
+                                <div class="image-preview full-height">
                                     <h4>Images Preview</h4>
                                     <div class="row">
                                         @foreach($images as $image)
