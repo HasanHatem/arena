@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    background-color: var(--white);
+    color: #697488;
+    font-family: 'Gotham', sans-serif;
+    min-height: 100vh;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      width: 0.4em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--black);
+    }
+
+    &::-moz-scrollbar {
+      width: 0.4em;
+    }
+
+    &::-moz-scrollbar-thumb {
+      background-color: var(--black);
+    }
+
+    &::-ms-scrollbar {
+      width: 0.4em;
+    }
+
+    &::-ms-scrollbar-thumb {
+      background-color: var(--black);
+    }
+
+    &::scrollbar {
+      width: 0.4em;
+    }
+
+    &::scrollbar-thumb {
+      background-color: var(--black);
+    }
+}
+
+// init
+a,
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}

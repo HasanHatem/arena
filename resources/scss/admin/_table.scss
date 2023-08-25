@@ -1,0 +1,116 @@
+.table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
+
+    * {
+        word-wrap: break-word;
+    }
+
+    thead, tfoot {
+        tr {
+            background-color: var(--white);
+            text-align: left;
+
+            th {
+                font-size: .857rem;
+                font-weight: 600;
+                color: var(--gray-700);
+                padding: .9rem 1rem;
+            }
+        }
+    }
+
+    thead {
+        border-bottom: 1px solid var(--gray-300);
+    }
+
+    tfoot {
+        border-top: 1px solid var(--gray-300);
+    }
+
+    tbody {
+        tr {
+            &.table-empty {
+                td {
+                    text-align: center;
+                }
+            }
+
+            &:nth-child(odd) {
+                background-color: var(--gray-200);
+            }
+
+            &:nth-child(even) {
+                background-color: var(--white);
+            }
+
+            &:hover {
+                .actions {
+                    li {
+                        a {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            td {
+                font-size: 0.9rem;
+                vertical-align: top;
+                padding: 12px 1rem;
+
+                a {
+                    color: var(--primaryColor);
+                    font-weight: 500;
+                    white-space: nowrap;
+                }
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                }
+            }
+
+            &.center {
+                td {
+                    vertical-align: middle;
+                }
+            }
+
+            &.level-1 {
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+// actions
+.actions {
+    height: 34px;
+
+    li {
+        width: 30px;
+        height: 30px;
+
+        a {
+            padding: .3rem;
+
+            &.show {
+                color: var(--primaryColor);
+            }
+
+            &.edit {
+                color: var(--orange);
+            }
+
+            &.delete {
+                color: var(--red)
+            }
+        }
+    }
+}

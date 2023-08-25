@@ -1,0 +1,31 @@
+.wrapper {
+    margin-left: 75px;
+    transition: margin-left 200ms ease-in-out;
+
+    &.open {
+        margin-left: 260px;
+    }
+}
+
+.content {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+
+    .page-title {
+        padding: 1.875rem;
+        margin: -1.875rem -1.875rem 1.875rem -1.875rem;
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+    }
+}
+
+.card {
+    padding: 1.25rem;
+    box-shadow: var(--boxShadow);
+    background-color: var(--white);
+    border-radius: var(--borderRadius);
+}

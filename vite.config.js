@@ -5,10 +5,21 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/app.css',
+                'resources/scss/app.scss',
+                'resources/scss/admin/admin.scss',
                 'resources/js/app.js',
+                'resources/js/admin/admin.js',
             ],
+            sass: {
+                includePaths: ['node_modules'],
+            },
             refresh: true,
-        }),
+        })
     ],
+    resolve: {
+        alias: {
+            '@utils': '/resources/js/utils/',
+        },
+    },
 });
+

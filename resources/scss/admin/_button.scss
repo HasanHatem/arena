@@ -1,0 +1,52 @@
+// buttons
+button {
+    &.btn {
+        border: none;
+        background-color: transparent;
+        font-family: inherit;
+        padding: 0;
+        cursor: pointer;
+
+        @media screen and (-ms-high-contrast: active) {
+            border: 2px solid currentcolor;
+        }
+    }
+}
+
+a.btn,
+button.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+    padding: 0 0.75em;
+    min-width: 10ch;
+    min-height: 36px;
+    text-align: center;
+    line-height: 1.1;
+    transition: 220ms all ease-in-out;
+    font-size: 1rem;
+
+    &-primary {
+        background-color: var(--primaryColor);
+        color: var(--white);
+        border-radius: var(--borderRadius);
+        box-shadow: var(--boxShadow);
+
+        svg {
+            fill: var(--white);
+        }
+
+        &:hover,
+        &:active {
+            background-color: scale-color(#b7834d, $lightness: -20%);
+        }
+
+        &:focus {
+            outline-style: solid;
+            outline-color: transparent;
+            box-shadow: 0 0 0 4px var(--secondaryColor);
+        }
+    }
+
+}

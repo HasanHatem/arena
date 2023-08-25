@@ -1,7 +1,16 @@
 import './bootstrap';
+import {sliders} from "./_sliders.js";
+import {home} from "./_home.js";
 
-import Alpine from 'alpinejs';
+const initApp = () => {
 
-window.Alpine = Alpine;
+    // Sliders
+    sliders();
 
-Alpine.start();
+    // Home
+    home();
+
+}
+
+// Start Script
+document.addEventListener("DOMContentLoaded", initApp);

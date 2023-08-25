@@ -1,0 +1,166 @@
+// Sidebar styles
+.sidebar {
+    position: fixed;
+    width: 75px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5;
+    transition: width var(--animationTime) ease-in-out;
+    box-shadow: 0 17px 15px 0 rgb(34 41 47 / 5%);
+    background-color: var(--white);
+    padding-top: 2rem;
+
+    .logo {
+        padding: 0 .4rem;
+        margin-bottom: 2rem;
+        width: 200px;
+        margin-inline: auto;
+    }
+
+    // Start menu
+    .menu {
+        flex-grow: 1;
+        width: 100%;
+        padding: 0 1rem;
+
+        ul {
+            li {
+                width: 100%;
+                margin-bottom: 0.5rem;
+
+                &.navigation-header {
+                    margin: 2.286rem 0 0.8rem 2.2rem;
+                    color: #a6a4b0;
+                    letter-spacing: .01rem;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    font-size: .9rem;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    padding: 10px 15px 10px 20px;
+                    border-radius: var(--borderRadius);
+                    color: var(--gray-700);
+
+                    > * {
+                        pointer-events: none;
+                    }
+
+                    .menu-icon {
+                        height: 20px;
+                        width: 20px;
+                        font-size: 1.45rem;
+                        -ms-flex-negative: 0;
+                        flex-shrink: 0;
+                    }
+
+                    .menu-text {
+                        opacity: 0;
+                        width: 0;
+                        height: 0;
+                        transition: all var(--animationTime) ease-in-out;
+                        white-space: nowrap;
+                        line-height: 1.45;
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+
+                    &:hover {
+                        background-color: var(--gray-200);
+                    }
+
+                    &.active {
+                        background-color: var(--primaryColor);
+                        box-shadow: var(--boxShadow);
+                        color: var(--white);
+                    }
+
+                }
+
+                // Start Dropdown
+                &.dropdown {
+                    .dropdown-menu {
+                        transition: all .26s ease;
+                        -ms-transform: scaleY(0);
+                        transform: scaleY(0);
+                        -ms-transform-origin: top;
+                        transform-origin: top;
+                        height: auto;
+                        max-height: 0;
+                        display: block !important;
+                        padding-left: 3.5rem;
+
+                        &:not(.active) {
+                            display: none;
+                        }
+
+                        // Right line for drop menu
+                        // &::before {
+                        //     content: '';
+                        //     position: absolute;
+                        //     top: 0%;
+                        //     width: 2px;
+                        //     height: 100%;
+                        //     background-color: var(--purple-200);
+                        // }
+
+                        li {
+                            margin-bottom: .2rem;
+
+                            a {
+                                padding: 10px 15px 10px 15px;
+
+                                .menu-text {
+                                    font-size: .9rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .expand-more {
+                        transition: transform .26s ease;
+                    }
+
+                    &.active {
+                        .dropdown-menu {
+                            -ms-transform: scaleY(1);
+                            transform: scaleY(1);
+                            max-height: 600px;
+                        }
+
+                        .expand-more {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // When sidebar open
+    &.open {
+        width: 260px;
+
+        .logo {
+            span {
+                display: block;
+            }
+        }
+
+        .menu {
+            ul {
+                li {
+                    a {
+                        .menu-text {
+                            opacity: 1;
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

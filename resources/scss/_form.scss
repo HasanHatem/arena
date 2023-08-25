@@ -1,0 +1,91 @@
+// Form Group
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+
+    label {
+        font-weight: 500;
+        color: #000;
+    }
+
+    .input-group {
+        margin-top: 13px;
+        position: relative;
+
+        input,
+        select,
+        textarea {
+            font-size: 1.125rem;
+            font-family: inherit;
+            padding: 24px 38px 15px;
+            background-color: var(--gray);
+            border: 0;
+            border-radius: 0.25rem;
+            transition: 180ms box-shadow ease-in-out;
+            width: 100%;
+            position: relative;
+
+            &:focus {
+                border-color: var(--primaryColor-300);
+                box-shadow: 0 0 0 3px var(--primaryColor-100);
+                outline: 3px solid transparent;
+            }
+
+            &:not(textarea) {
+                line-height: 2;
+                //height: 75px;
+            }
+
+            &.is-invalid {
+                border-color: var(--red-800);
+                padding-right: 2.25rem;
+                background-repeat: no-repeat;
+                background-position: center right calc(2.25rem / 4);
+                background-size: calc(2.25rem / 2) calc(2.25rem / 2);
+
+                &:focus {
+                    border-color: var(--red-800);
+                    box-shadow: 0 0 0 0.2rem rgba(217, 37, 80, 0.25);
+                    outline: 3px solid transparent;
+                }
+            }
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 37px;
+            top: 32px;
+        }
+
+        input[type="file"] {
+            font-size: 0.9em;
+            padding-top: 0.35rem;
+        }
+
+        // Textarea
+        textarea {
+            resize: vertical;
+        }
+
+        .invalid-feedback {
+            color: var(--red-800);
+            width: 100%;
+            margin-top: 0.25rem;
+            font-size: 80%;
+        }
+
+        .note {
+            color: var(--gray-600);
+            width: 100%;
+            margin-top: 0.25rem;
+            font-size: 80%;
+            display: block;
+        }
+
+    }
+}

@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: #161922;
+    font-family: 'Gotham', sans-serif;
+    min-height: 100vh;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-size: 1.125rem;
+
+    &::-webkit-scrollbar {
+      width: 0.4em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--black);
+    }
+
+    &::-moz-scrollbar {
+      width: 0.4em;
+    }
+
+    &::-moz-scrollbar-thumb {
+      background-color: var(--black);
+    }
+
+    &::-ms-scrollbar {
+      width: 0.4em;
+    }
+
+    &::-ms-scrollbar-thumb {
+      background-color: var(--black);
+    }
+
+    &::scrollbar {
+      width: 0.4em;
+    }
+
+    &::scrollbar-thumb {
+      background-color: var(--black);
+    }
+}
+
+// init
+a,
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+
+.title {
+    .sub-title {
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        color: var(--primaryColor);
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        margin-bottom: 18px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -68px;
+            top: 8px;
+            height: 2px;
+            width: 54px;
+            background-color: var(--primaryColor);
+        }
+    }
+
+    h2 {
+        font-size: 3.375rem;
+        font-weight: 500;
+        color: var(--black);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.25s ease, transform 0.5s ease;
+
+        &.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .description {
+        margin-top: 2.8rem;
+
+        p {
+            font-weight: 300;
+            color: #000;
+            margin-bottom: .5rem;
+        }
+
+        .second {
+            font-weight: 500;
+            color: var(--primaryColor);
+        }
+    }
+}
+
+.fix-font {
+    position: relative;
+    bottom: -6.5px;
+}
+
+.fix-title {
+    position: relative;
+    bottom: -18px;
+}
