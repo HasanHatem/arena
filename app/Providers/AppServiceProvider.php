@@ -21,13 +21,21 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(GeneralSettings $generalSettings): void
+    public function boot(): void
     {
         Model::unguard();
 
-        View::share([
-            'headerMenu' => Menu::with('links')->where('slug', 'header-menu')->first(),
-            'settings' => $generalSettings
-        ]);
+        try {
+            $generalSettings = new (GeneralSettings::class);
+            
+            View::share([
+                'headerMenu' => Menu::with('links')->where('slug', 'header-menu')->first(),
+                'settings' => $generalSettings
+            ]);
+        } catch (\Exception $e) {
+
+        }
+
+
     }
 }
