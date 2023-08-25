@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
 
         try {
             $generalSettings = new (GeneralSettings::class);
-            
+
             View::share([
                 'headerMenu' => Menu::with('links')->where('slug', 'header-menu')->first(),
                 'settings' => $generalSettings
